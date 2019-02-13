@@ -195,3 +195,13 @@ Cross Region Replication :
 
 
 
+Life Cycle Management, IA(Infrequent Access) S3 and Glacier :
+	-Can be used in conjction with versionsing
+	-Can be applied to previous verion and current version.
+	-Actions performed
+		-Transition to Standard IA (128k and 30 Days after creation date)
+		-Archive to Glacier Storage Class(30 days after IA)
+		-Permanently Delete.
+		
+CloudFront :
+	CDN : 
