@@ -1,0 +1,197 @@
+Services for AWS :
+Compute -->
+		EC2
+		EC2 Container Service
+		Elastic Beanstalk
+		Lambda
+		Lightsail
+		Batch (Batch Computing)
+
+Storage -->
+		S3 (Simple Storage Service -> Upload files in buckets)
+		EFS(Elastic File storage like NFS)
+		Glacier (Data Archival)
+		Snowball(Bring large amount of data in AWS Data Center)
+		Storage Gateway(VMs that replicate information to S3)
+
+Databses -->
+		RDS(MSQL, Any relational dabases will sit here)
+		DynamoDB (Any Non Relational Databases.)
+		Elasticache (Caching serviceGet Commonly querries things)
+		RedShift (Getting the Business Intellignce and complex queries.)
+
+Mgration -->
+		AWS Migration Hub(Track your services while migration)
+		Application Discovery Serivce (Find the depency and track dependencies in your App )
+		Database Migration Service (Easy way to migrate service from Oracle to AWS.)
+		Server Migration Service -- Its for Server services
+		Snowball
+
+Network and Content Delivery -->
+		VPC (Virtual Private Cloud --> Virtual Data Center)
+		CloudFront(Amazons Content Delivery Network )
+		Route53 (Amazons DNS servers.)
+		API Gateway(Is a way of creating our own APIs)
+		Direct Connect (Away of running direct line from office to Amazon.)
+
+Developer Tools --> Not required for Exam
+		Code Star (Like Perforce)
+		Code Commit (sSource Control)
+		CodeBuild(Comiple and Test and create Package)
+		CodeDeploy(For Code deployment)
+		Code Pipeline()
+		Xray(for Debuging)
+		Cloud9(IDE)
+
+
+Management Tools -->
+		CloudWatch-->Imp
+		CouldFormation -->Very imp (Way of scripting Infratructure)
+		CloudTrail (Log Changes in AWS environment)
+		Config (Monitors Configuration of AWS environment)
+		OpsWorks(Simlar to Elastic Beanstalk uses Chef and Puppet)
+		Service Catalog(A way of managing catalog services. )
+		SystemsManager ()
+		TrustedAdvisor(Give advice around  mutliple services and AWS environment) Imp
+		ManagedServices
+
+Media Services -->
+		Elastic transcoder (Resize video depending on Platform ie Android Mac)
+		Media Convert ()
+		Media Live
+		MediaPackage
+		MediaStore(Storage service for media)
+		MediaTailor(Targeted advertsing in media streams)
+
+
+Machine Learning -->
+		SageMaker(Used to integrate Deep Learning)
+		COmprehend(Sentiment Analysis)
+		DeepLens(AI enabled Camera)
+		Lex (way of comunicating with Customers)
+		Machine Learning (Used for recommnedations)
+		Polly( Convert Text to Speech)
+		Rekognition(Upload a picture and tells you what is in it.)
+		Amazon Translate (English )
+		Amazon Transcribe (Automatic Speech Recognition)
+
+Analytics -->
+		Athena ()
+		EMR(Elastic Map reduce) --Imp
+		Cloud Search
+		Elastic Search Service
+		Kinesis (Way of ingesting Large amount of Data in AWS.)
+		Kinesis Video Streams
+		QuickSight (Amazon BI tool)
+		DataPipeline(Moving data between diffrent AWS services)
+		Glue (Is a ETL)
+
+
+Security Identity and Compliance -->
+		IAM (Identity access management)
+		Cognito (way of doing device authentication)
+		GuardDuty(Detect malicious activity)
+		Inspector(Look for security vulnerabilty)
+		Macie(Scan S3 buckets)
+		Certificate Manager(way of managing SSL )
+		CloudHSM ()
+		DirectoryServices (integration of Microsoft Directory Services with AWS)
+		WAF()
+		Sheild (prevent DDOS attack)
+		Arftifact (TO download Complicance Report and Agreement)
+
+Mobiles Services -->
+		Mobile Hub (management console for Mobile App)
+		Pinpoint(Targeted push notifications)
+		AWS AppSync
+		DeviceFarm (Testing the apps on Live)
+		Mobile Analytics
+
+AR/VR -->
+		Sumerian (3D)
+
+Application INtegration -->
+		Step Functions 
+		Amazon MQ (way of doing message Queue)
+		SNS
+		SQS
+		SWF
+
+Custome Engagement -->
+		Connect (Enables dynamic and personal Communication)
+		Simple Email Service (For sending large ammount of emails ) -- Imp
+
+Bussiness Productivity -->
+		Alexa For Bussiness ()
+		Chime (Like google hangout. )
+		WorkDocs (like Dropbox) -- Imp
+		WorkMAil (liek office 365)
+
+Desktop and App Streaming -->
+		Workspaces
+		AppStream 2.0
+
+IoT -->
+		iOT
+		iOT Device Management
+		Amazon FreeRTOS
+		GreenGrass (For running ML)
+
+
+GameDevelopment -->
+	GameLift
+
+
+
+Identity Access Management -->
+		Allows you to manage users and their level of access to AWS console.
+		IAM is global and is not specific to region.
+		"Root account " 
+				is simply the account created when first setup your AWS account. It has complete admin access
+		New Users have NO permission when first created.
+		New users are assigned  Access Key ID and Secret Access Keys when first created.
+		These are not same as password. They are used to access AWS via APIs and commnad line
+		IAM consist of following.
+				Users
+				Groups(A way to group our users and apply polices to them collectively)
+				Roles
+				Policy Documents ( A jason file with key value pair)
+
+		Always setup Multifactor Authentication on your root account.
+
+
+S3 (Simeple storage service ) Place to store data on cloud.
+		-Secure, durable, highly scalable object storage
+		-Easy to use . with simple web service inteface to store and retrive any amount of data from anywhere on the web.
+		-It is object based storage.(Videos, photos, )
+		-data is spread acrooss multiple devices and facilities
+		-Files are stored in buckets (assume its a folder)
+		-S3 is a universal namespace, that is , names must be unique globally.
+		-Http 200 code  on successful upload.
+		-NOT subitable for installationof OS and DB
+
+		Read S3 FAQ's --VVIP
+
+		S3 obejects consist of following
+				Key(name)
+				Value(data)
+				Verison ID
+				MetaData
+				Subresources
+						Access Control List(ACL)
+						Torrent(protocol)
+
+
+Cross Region Replication : 
+
+		-Management --> Replication
+		-Once the replica is created only the new objects from the source bucket will be replicated. 
+		-Exisisting objects will not be replicated.
+		-Versioning must be enabled on both the source and destination buckets.
+		-Regions must be unique
+		-You cannot replicate to multiple buckets or use daisy chaining (at this time)
+		-Delete markers are replicated.
+		-Deleting individual versions or delete markers will not be replicated.
+
+
+
